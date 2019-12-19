@@ -41,3 +41,11 @@ Oracle 帐户：18838166792@163.com MHJ1314yjg
   `npm install -g yarn react-native-cli`
 
   注意配置环境变量
+
+## 创建新项目
+
+    `react-native init AndroidDemo`
+
+## 使用 Android 模拟器
+
+## 编译运行
