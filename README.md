@@ -55,3 +55,16 @@ Oracle 帐户：18838166792@163.com MHJ1314yjg
 - 打开一个模拟器
 
 - npm run android
+
+## 目录构建
+
+参考： https://juejin.im/post/5df8112d51882512591aaf4d#heading-0
+
+## 项目开始
+
+参考：https://github.com/fengshi123/react_native_project
+
+- 路由配置 react-navigation
+
+  https://reactnavigation.org/docs/zh-Hans/getting-started.html
+
