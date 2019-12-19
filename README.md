@@ -49,3 +49,9 @@ Oracle 帐户：18838166792@163.com MHJ1314yjg
 ## 使用 Android 模拟器
 
 ## 编译运行
+
+- 安卓编译器打开项目下的 android 文件夹
+
+- 打开一个模拟器
+
+- npm run android
