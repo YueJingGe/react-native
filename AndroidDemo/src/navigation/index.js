@@ -24,19 +24,6 @@ const HomeStack = createStackNavigator(
   },
   {
     initialRouteName: 'Home',
-    defaultNavigationOptions: {
-      tabBarOptions: {
-        activeTintColor: 'tomato',
-        inactiveTintColor: 'gray',
-      },
-      headerStyle: {
-        backgroundColor: '#000',
-      },
-      headerTintColor: '#fff',
-      headerTitleStyle: {
-        fontWeight: 'bold',
-      },
-    },
   },
 );
 
@@ -51,43 +38,40 @@ const MainStack = createStackNavigator(
   },
   {
     initialRouteName: 'Main',
-    defaultNavigationOptions: {
-      tabBarOptions: {
-        activeTintColor: 'tomato',
-        inactiveTintColor: 'gray',
-      },
-      headerStyle: {
-        backgroundColor: '#000',
-      },
-      headerTintColor: '#fff',
-      headerTitleStyle: {
-        fontWeight: 'bold',
-      },
-    },
   },
 );
 
 const TabNavigator = createBottomTabNavigator(
   {
-    Home: HomeStack,
-    Main: MainStack,
+    Home: {
+      screen: HomeStack,
+      title: '首页',
+    },
+    Main: {
+      screen: MainStack,
+      title: '我的',
+    },
   },
   {
     /* 跨页面共享通用的navigationOptions */
     defaultNavigationOptions: ({navigation}) => ({
-      tabBarIcon: ({focused, horizontal, tintColor}) => {
-        const {routeName} = navigation.state;
-        let IconComponent = Ionicons;
-        let iconName;
-        // 如果是 Home 添加右上角徽章
-        if (routeName === 'Home') {
-          iconName = `ios-information-circle${focused ? '' : '-outline'}`;
-          IconComponent = HomeIconWithBadge;
-        } else if (routeName === 'Main') {
-          iconName = `ios-options`;
-        }
-        return <IconComponent name={iconName} size={25} color={tintColor} />;
-      },
+      // tabBarIcon: ({focused, horizontal, tintColor}) => {
+      //   const {routeName} = navigation.state;
+      //   let IconComponent = Ionicons;
+      //   let iconName;
+      //   // 如果是 Home 添加右上角徽章
+      //   if (routeName === 'Home') {
+      //     iconName = `ios-information-circle${focused ? '' : '-outline'}`;
+      //     IconComponent = HomeIconWithBadge;
+      //   } else if (routeName === 'Main') {
+      //     iconName = `ios-options`;
+      //   }
+      //   return <IconComponent name={iconName} size={25} color={tintColor} />;
+      // },
+      // tabBarOptions: {
+      //   activeTintColor: 'tomato',
+      //   inactiveTintColor: 'gray',
+      // },
     }),
     initialRouteName: 'Home',
   },

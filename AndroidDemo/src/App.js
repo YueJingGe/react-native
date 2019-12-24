@@ -3,6 +3,6 @@ import AppContainer from './navigation/index';
 
 export default class App extends Component {
   render() {
-    return <AppContainer />;
+    return <AppContainer theme="light" />;
   }
 }

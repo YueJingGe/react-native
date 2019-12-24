@@ -4,7 +4,7 @@ import {View, Button, Text} from 'react-native';
 export default class Login extends Component {
   static navigationOptions = ({navigation}) => {
     return {
-      title: `详情-${navigation.getParam('itemId', 'NULL')}`,
+      title: `详情-${navigation.getParam('title', 'NULL')}`,
     };
   };
   handleClick = () => {
@@ -16,9 +16,8 @@ export default class Login extends Component {
     return (
       <View>
         <Text>
-          itemId: {JSON.stringify(navigation.getParam('itemId', 'NULL'))}
+          title: {JSON.stringify(navigation.getParam('title', 'NULL'))}
         </Text>
-        <Button title="回到首页" onPress={this.handleClick} />
       </View>
     );
   }
